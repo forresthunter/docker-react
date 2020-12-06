@@ -9,4 +9,5 @@ RUN npm run build
  #This is the run phase for Nginx
  #--from=0 says we want the results from /app/build after the build (0) phase
 FROM nginx
+EXPOSE 80
 COPY --from=0 /app/build /usr/share/nginx/html
